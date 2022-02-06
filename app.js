@@ -17,7 +17,7 @@ const users =
         username: 'shubham',
         password: 'password2'
     }
-    ]
+]
 
 
 app.use(express.json())
