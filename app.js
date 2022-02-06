@@ -86,8 +86,10 @@ function auth(request, response)
     
     if ( check_user )
     {
-    const token = jwt.sign({ username, password } , 'my_secret_key',
-                           {expiresIn: '20m'})
+    //const token = jwt.sign({ username, password } , 'my_secret_key',
+    //                      {expiresIn: '20m'})
+    //Add a hardcoded Token
+    const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
     
         response.json({token: token})
     }
