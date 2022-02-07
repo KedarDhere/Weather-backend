@@ -38,6 +38,9 @@ function verifyToken(request, response, next){
     }
 }
 
+app.use('/api-docs', require('./swagger.js'));
+
+
 app.get('/v1/weather', verifyToken, get_weather)
 function get_weather(request,response)
 {
